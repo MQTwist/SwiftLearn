@@ -1,19 +1,20 @@
 //
-//  ViewController.swift
+//  MQTabbarController.swift
 //  SwiftDemo
 //
-//  Created by 3ttyy on 2022/2/28.
+//  Created by MQTwist on 2022/3/11.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MQTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
+    
+    
 
 }
-

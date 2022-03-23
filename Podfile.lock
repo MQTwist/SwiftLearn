@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.5.0)
+  - HandyJSON (5.0.2)
+  - Kingfisher (7.2.0)
+  - MQExtension (1.0.4)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.5.0)
+  - HandyJSON (= 5.0.2)
+  - Kingfisher
+  - MQExtension
+  - SnapKit (~> 5.0.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+  https://github.com/MQTwist/MQSpecs.git:
+    - MQExtension
+  trunk:
+    - Alamofire
+    - HandyJSON
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  MQExtension: 979e9c9bb399ee61ec74d30ac4e5b857d11d0e77
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 14242f067ad9423c5000d587bc13e8db42e975b2
+
+COCOAPODS: 1.11.2

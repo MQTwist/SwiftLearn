@@ -6,31 +6,50 @@
 //
 
 import UIKit
+import Foundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var window: UIWindow?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        createTabbar()
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    func createTabbar() {
+        
+        if let delegate = UIApplication.shared.delegate {
+            let delegate = delegate as! AppDelegate
+            
+            let homeVC = ViewController()
+            homeVC.tabBarItem = UITabBarItem.init(title: "Home", image: UIImage(), selectedImage: UIImage())
+            let uiVC = UIKitVC()
+            uiVC.tabBarItem = UITabBarItem.init(title: "UI", image: UIImage(), selectedImage: UIImage())
+            let caVC = AlgorithmVC()
+            caVC.tabBarItem = UITabBarItem.init(title: "Algorithm", image: UIImage(), selectedImage: UIImage())
+            let netVC = NetWorkVC()
+            netVC.tabBarItem = UITabBarItem.init(title: "Net", image: UIImage(), selectedImage: UIImage())
+            
+            let homeNav = BaseNavigationController.init(rootViewController: homeVC)
+            let uiNav = BaseNavigationController.init(rootViewController: uiVC)
+            let caNav = BaseNavigationController.init(rootViewController: caVC)
+            let netNav = BaseNavigationController.init(rootViewController: netVC)
+            
+//            UITabBar.appearance().backgroundImage = UIImage()
+//            UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.red], for: .selected)
+            
+            let tabbarController = MQTabbarController()
+            tabbarController.viewControllers = [homeNav, uiNav, caNav, netNav]
+            delegate.window?.rootViewController = tabbarController
+            delegate.window?.makeKeyAndVisible()
+        }
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
 
 }
 
