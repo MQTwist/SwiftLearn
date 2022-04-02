@@ -27,6 +27,7 @@
 		BE76B00727DB3E2A00EA6151 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76B00627DB3E2A00EA6151 /* BaseNavigationController.swift */; };
 		BE76B00B27DB40FD00EA6151 /* MQTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76B00A27DB40FD00EA6151 /* MQTabbarController.swift */; };
 		BE7F5C2627DF040300FC0F4D /* StringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F5C2527DF040300FC0F4D /* StringVC.swift */; };
+		BE844C3F27F879A9000E7BC2 /* FlutterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE844C3E27F879A8000E7BC2 /* FlutterVC.swift */; };
 		BE8774B727D84B7C00E90569 /* GetSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8774B627D84B7C00E90569 /* GetSetVC.swift */; };
 		BE8774BA27D85C7A00E90569 /* SnapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8774B927D85C7A00E90569 /* SnapVC.swift */; };
 		BEBA649027D9A5C400CAE244 /* CharReverseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBA648F27D9A5C400CAE244 /* CharReverseVC.swift */; };
@@ -86,6 +87,7 @@
 		BE76B00627DB3E2A00EA6151 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		BE76B00A27DB40FD00EA6151 /* MQTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTabbarController.swift; sourceTree = "<group>"; };
 		BE7F5C2527DF040300FC0F4D /* StringVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringVC.swift; sourceTree = "<group>"; };
+		BE844C3E27F879A8000E7BC2 /* FlutterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterVC.swift; sourceTree = "<group>"; };
 		BE8774B627D84B7C00E90569 /* GetSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSetVC.swift; sourceTree = "<group>"; };
 		BE8774B927D85C7A00E90569 /* SnapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapVC.swift; sourceTree = "<group>"; };
 		BEBA648F27D9A5C400CAE244 /* CharReverseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharReverseVC.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				BE8774B927D85C7A00E90569 /* SnapVC.swift */,
 				BE666F6227CE2B3300E649F1 /* VIewAnimationVC.swift */,
 				BE76B00427DB374D00EA6151 /* StatusBarVC.swift */,
+				BE844C3E27F879A8000E7BC2 /* FlutterVC.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildConfigurationList = BEC7FB4E27CCCDE000BA934B /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
 			buildPhases = (
 				7AA73B438C2A830182BFEDE0 /* [CP] Check Pods Manifest.lock */,
+				FE9E02FAEEB9C1B09998A901 /* [CP-User] Run Flutter Build flutter_application_3 Script */,
 				BEC7FB2027CCCDDF00BA934B /* Sources */,
 				BEC7FB2127CCCDDF00BA934B /* Frameworks */,
 				BEC7FB2227CCCDDF00BA934B /* Resources */,
@@ -452,6 +456,16 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FE9E02FAEEB9C1B09998A901 /* [CP-User] Run Flutter Build flutter_application_3 Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_application_3 Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../Flutter/flutter_application_3/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,6 +482,7 @@
 				BE7527F427D7454800B4A0CD /* FuncVC.swift in Sources */,
 				BEC7FB2C27CCCDDF00BA934B /* ViewController.swift in Sources */,
 				BE10E65A27CCDB8F00639F60 /* TableViewCell.swift in Sources */,
+				BE844C3F27F879A9000E7BC2 /* FlutterVC.swift in Sources */,
 				BE666F5E27CDEB1A00E649F1 /* AlgorithmVC.swift in Sources */,
 				BE666F5627CDBEDE00E649F1 /* NetWork.swift in Sources */,
 				BEBA649027D9A5C400CAE244 /* CharReverseVC.swift in Sources */,

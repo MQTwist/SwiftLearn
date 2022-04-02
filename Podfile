@@ -1,5 +1,11 @@
+
+
+platform :ios, '10.0'
+
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '12.0'
+
+flutter_path = '/Users/3ttyy/Desktop/Company/DaoFeng/Flutter/flutter_application_3'
+load File.join(flutter_path, '.ios', 'Flutter', 'podhelper.rb')
 
 target 'SwiftDemo' do
   use_frameworks!
@@ -9,6 +15,8 @@ target 'SwiftDemo' do
   pod 'HandyJSON', '5.0.2'
   pod 'MQExtension'
   pod 'Kingfisher'
+  
+  install_all_flutter_pods(flutter_path)
   
 end
 

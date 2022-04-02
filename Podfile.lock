@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (5.5.0)
+  - Flutter (1.0.0)
+  - flutter_application_3 (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
   - HandyJSON (5.0.2)
   - Kingfisher (7.2.0)
   - MQExtension (1.0.4)
@@ -7,6 +12,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.5.0)
+  - Flutter (from `../../Flutter/flutter_application_3/.ios/Flutter/engine`)
+  - flutter_application_3 (from `../../Flutter/flutter_application_3/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../../Flutter/flutter_application_3/.ios/Flutter/FlutterPluginRegistrant`)
   - HandyJSON (= 5.0.2)
   - Kingfisher
   - MQExtension
@@ -22,13 +30,24 @@ SPEC REPOS:
     - HandyJSON
     - SnapKit
 
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../../Flutter/flutter_application_3/.ios/Flutter/engine"
+  flutter_application_3:
+    :path: "../../Flutter/flutter_application_3/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../../Flutter/flutter_application_3/.ios/Flutter/FlutterPluginRegistrant"
+
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
+  flutter_application_3: 32176602a541ca225503f78d92e6782d3789cd63
+  FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   MQExtension: 979e9c9bb399ee61ec74d30ac4e5b857d11d0e77
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 14242f067ad9423c5000d587bc13e8db42e975b2
+PODFILE CHECKSUM: 907ef80708247c5986f1d419db1c817b829882f9
 
 COCOAPODS: 1.11.2

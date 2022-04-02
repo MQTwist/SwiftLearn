@@ -7,19 +7,32 @@
 
 import UIKit
 import Foundation
+@_exported import Flutter
+@_exported import FlutterPluginRegistrant
+import AppTrackingTransparency
+import AdSupport
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
+    /// flutter初始化
+    let flutterEngine = FlutterEngine.init(name: "flutterEngine")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
+        
+        initFlutter()
         createTabbar()
         
         return true
+    }
+    
+    func initFlutter() {
+        flutterEngine.run()
     }
     
     func createTabbar() {

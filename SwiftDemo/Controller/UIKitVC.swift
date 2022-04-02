@@ -15,11 +15,12 @@ class UIKitVC: BaseTableViewVC {
     }
     
     override func configData() {
-        dataArr = [("1", "Snap"), ("2", "ViewAnimation"), ("3", "UIStatusBarStyle")]
+        dataArr = [("1", "Snap"), ("2", "ViewAnimation"), ("3", "UIStatusBarStyle"), ("4", "FlutterHome")]
         tableView.reloadData()
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
         var vc: BaseVC?
         switch indexPath.row {
             case 0:
@@ -28,6 +29,12 @@ class UIKitVC: BaseTableViewVC {
                 vc = VIewAnimationVC()
             case 2:
                 vc = StatusBarVC()
+            case 3:
+//                let vc = FlutterVC.init(engine: flutterEngine, nibName: nil, bundle: nil)
+                let vc = FlutterVC.init(project: nil, initialRoute: "ListPage", nibName: nil, bundle: nil)
+                vc.title = dataArr[indexPath.row].1
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
             default:
                 break
         }
